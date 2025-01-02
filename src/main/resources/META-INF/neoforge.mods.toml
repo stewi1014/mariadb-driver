@@ -1,0 +1,9 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="GPLv2"
+[[mods]]
+modId="mariadb_driver"
+version="${version}"
+displayName="MariaDB JDBC Driver"
+description='''MariaDB JDBC Driver'''
+logoFile="mariadblogo.png"

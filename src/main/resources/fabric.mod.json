@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "mariadb-driver",
+  "version": "${version}",
+  "name": "MariaDB JDBC Driver",
+  "description": "MariaDB JDBC Driver",
+  "authors": [],
+  "contact": {
+    "homepage": "https://git.lenqua.link/minecraft/mariadb-driver",
+    "sources": "https://git.lenqua.link/minecraft/mariadb-driver"
+  },
+  "license": "GPLv2",
+  "icon": "mariadblogo.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [],
+  "depends": {
+    "java": ">=8"
+  }
+}

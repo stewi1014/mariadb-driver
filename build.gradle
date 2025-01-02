@@ -1,0 +1,10 @@
+plugins {
+    id "com.gradleup.shadow" version "9.0.0-beta4"
+    id "java"
+}
+
+repositories { mavenCentral() }
+dependencies { implementation "org.mariadb.jdbc:mariadb-java-client:${version}" }
+processResources.filesMatching(["fabric.mod.json", "META-INF/neoforge.mods.toml"]){expand("version": version)}
+build { dependsOn(shadowJar) }
+jar.enabled = false
