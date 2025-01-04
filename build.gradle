@@ -8,3 +8,16 @@ dependencies { implementation "org.mariadb.jdbc:mariadb-java-client:${version}" 
 processResources.filesMatching(["fabric.mod.json", "META-INF/neoforge.mods.toml"]){expand("version": version)}
 build { dependsOn(shadowJar) }
 jar.enabled = false
+
+shadowJar {
+    String shadePath = "org.mariadb.jdbc.shaded"
+
+    relocate("com.github.benmanes.caffeine", "${shadePath}.com.github.benmanes.caffeine")
+    relocate("waffle", "${shadePath}.waffle")
+    relocate("com.google.errorprone.annotations", "${shadePath}.com.google.errorprone.annotations")
+    relocate("com.sun.jna", "${shadePath}.com.sun.jna")
+    relocate("com.sun.jna.platform", "${shadePath}.com.sun.jna.platform")
+    relocate("org.apache.commons", "${shadePath}.org.apache.commons")
+    relocate("org.checkerframework", "${shadePath}.org.checkerframework")
+    relocate("org.slf4j", "${shadePath}.org.slf4j")
+}
