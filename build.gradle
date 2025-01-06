@@ -10,6 +10,8 @@ build { dependsOn(shadowJar) }
 jar.enabled = false
 
 shadowJar {
+    mergeServiceFiles()
+
     String shadePath = "org.mariadb.jdbc.shaded"
 
     relocate("com.github.benmanes.caffeine", "${shadePath}.com.github.benmanes.caffeine")
